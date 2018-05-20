@@ -1,0 +1,211 @@
+/* NORMALIZE */
+/* ================================================ */
+html, body, div, span, applet, main, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, main, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Tahoma, sans-serif;
+  line-height: 1;
+  background-color: #ffffff;
+  height: 100%;
+  position: relative;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-width: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+input, textarea {
+  color: #333;
+  outline: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input[type="button"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+td, form {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: #000100;
+  transition: all 0.3s linear;
+  text-decoration: none;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Black.eot");
+  src: url("../fonts/ProximaNova-Black.eot") format("eot"), url("../fonts/ProximaNova-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Light.eot");
+  src: url("../fonts/ProximaNova-Light.eot") format("eot"), url("../fonts/ProximaNova-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Semibold.eot");
+  src: url("../fonts/ProximaNova-Semibold.eot") format("eot"), url("../fonts/ProximaNova-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Georgia";
+  src: url("../fonts/Georgia.eot");
+  src: url("../fonts/Georgia.eot") format("eot"), url("../fonts/Georgia.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../fonts/ProximaNova-Regular.eot");
+  src: url("../fonts/ProximaNova-Regular.eot") format("eot"), url("../fonts/ProximaNova-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../fonts/PlayfairDisplayBold.eot");
+  src: url("../fonts/PlayfairDisplayBold.eot") format("eot"), url("../fonts/PlayfairDisplayBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "fontello";
+  src: url("../fonts/fontello.eot");
+  src: url("../fonts/fontello.eot") format("eot"), url("../fonts/fontello.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.demo-icon {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  /* <i class="demo-icon icon-phone">&#xe800;</i> */
+}
+
+body {
+  font-size: 16px;
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+main .container {
+  max-width: 1280px;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+main header .flex-wrap {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ad83b2;
+}
+main header .flex-wrap .address {
+  max-width: 530px;
+  width: 100%;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  font-weight: normal;
+  justify-content: space-between;
+}
+main header .flex-wrap .address .adr {
+  max-width: 195px;
+  width: 100%;
+}
+main header .flex-wrap .address .adr p {
+  line-height: 1.1;
+}
+main header .flex-wrap .address .adr p strong {
+  font-weight: 600;
+}
+main header .flex-wrap .address .adr p i {
+  color: #b2a88c;
+  margin-right: 20px;
+}
+main header .flex-wrap .address .adr p a {
+  font-weight: 600;
+}
