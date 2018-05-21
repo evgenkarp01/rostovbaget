@@ -207,6 +207,25 @@ main header .flex-wrap .address .adr p i {
 }
 main header .flex-wrap .address .adr p a {
   font-weight: 600;
+  position: relative;
+}
+main header .flex-wrap .address .adr p a:after, main header .flex-wrap .address .adr p a:before {
+  content: '';
+  position: absolute;
+  top: 85%;
+  width: 0%;
+  height: 2px;
+  background: #000;
+  transition: .3s;
+}
+main header .flex-wrap .address .adr p a:after {
+  right: 50%;
+}
+main header .flex-wrap .address .adr p a:before {
+  left: 50%;
+}
+main header .flex-wrap .address .adr p a:hover:before, main header .flex-wrap .address .adr p a:hover:after {
+  width: 50%;
 }
 main .btn {
   position: relative;
@@ -333,6 +352,7 @@ main section.main nav ul li {
 main section.main nav ul li a {
   font-size: 18px;
   color: #fff;
+  display: block;
 }
 main section.main nav ul li:hover {
   background: #b797c1;
@@ -615,7 +635,15 @@ main section.five-screen .promo {
   width: 100%;
   background: url(../img/bgScreenFive.jpg) no-repeat;
   background-position: 100% 100%;
+  background-size: cover;
   min-height: 323px;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
 }
 main section.five-screen .promo .stock {
   max-width: 510px;
@@ -636,6 +664,182 @@ main section.five-screen .promo .stock .desc strong {
 main section.five-screen .promo .stock form {
   display: flex;
   justify-content: space-between;
+  margin-top: 43px;
+  position: relative;
+  height: 58px;
+  margin-top: 43px;
+}
+main section.five-screen .promo .stock form input {
+  background: none;
+  border: none;
+  font-size: 22px;
+  position: absolute;
+  left: 0;
+  bottom: 13px;
+  transition: all 0.25s ease-out;
+}
+main section.five-screen .promo .stock form input:focus {
+  font-size: 24px;
+  font-weight: 400;
+}
+main section.five-screen .promo .stock .btn-stock {
+  display: inline-block;
+  width: 257px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+main section.five-screen .promo .no-margin {
+  margin-top: 0;
+}
+main section.six-screen .contacts {
+  width: 100%;
+}
+main section.six-screen .contacts .flex-wrap {
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+main section.six-screen .contacts .col6 {
+  width: 50%;
+}
+main section.six-screen .contacts .address {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 62px;
+  margin-left: 75px;
+}
+main section.six-screen .contacts .address address {
+  font-style: normal;
+}
+main section.six-screen .contacts .address address strong {
+  font-weight: 600;
+}
+main section.six-screen .contacts .address .phone {
+  padding: 15px 0;
+}
+main section.six-screen .contacts .address .phone span i {
+  color: #b2a88c;
+}
+main section.six-screen .contacts .address .phone span a {
+  font-weight: 600;
+  position: relative;
+}
+main section.six-screen .contacts .address .phone span a:after, main section.six-screen .contacts .address .phone span a:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 0%;
+  height: 2px;
+  background: #000;
+  transition: .3s;
+}
+main section.six-screen .contacts .address .phone span a:after {
+  right: 50%;
+}
+main section.six-screen .contacts .address .phone span a:before {
+  left: 50%;
+}
+main section.six-screen .contacts .address .phone span a:hover:before, main section.six-screen .contacts .address .phone span a:hover:after {
+  width: 50%;
+}
+main section.six-screen .contacts .address .phone span:last-child {
+  margin-left: 20px;
+}
+main section.six-screen .contacts .address .clock i {
+  color: #b2a88c;
+}
+main section.six-screen .contacts form {
+  margin-left: 90px;
+  max-width: 442px;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+}
+main section.six-screen .contacts form input {
+  transition: all 2s ease-out;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #000;
+  font-weight: 400;
+  padding: 0 10px;
+  width: 100%;
+  margin-bottom: 25px;
+}
+main section.six-screen .contacts form input::-webkit-input-placeholder {
+  color: #000;
+  font-weight: 400;
+}
+main section.six-screen .contacts form input::-moz-placeholder {
+  color: #000;
+  font-weight: 400;
+}
+main section.six-screen .contacts form input:-moz-placeholder {
+  color: #000;
+  font-weight: 400;
+}
+main section.six-screen .contacts form input:-ms-input-placeholder {
+  color: #000;
+  font-weight: 400;
+}
+main section.six-screen .contacts form input:focus {
+  border-bottom: 1px solid #b2a88c;
+  background: #f2f2f2;
+}
+main section.six-screen .contacts form textarea {
+  transition: all 2s ease-out;
+  background: none;
+  padding: 5px 10px;
+  width: 100%;
+  height: 152px;
+  font-weight: 400;
+  font-size: 16px;
+  border: 1px solid #000;
+}
+main section.six-screen .contacts form textarea::-webkit-input-placeholder {
+  color: #000;
+  font-weight: 400;
+}
+main section.six-screen .contacts form textarea::-moz-placeholder {
+  color: #000;
+  font-weight: 400;
+}
+main section.six-screen .contacts form textarea:-moz-placeholder {
+  color: #000;
+  font-weight: 400;
+}
+main section.six-screen .contacts form textarea:-ms-input-placeholder {
+  color: #000;
+  font-weight: 400;
+}
+main section.six-screen .contacts form textarea:focus {
+  border: 1px solid #b2a88c;
+  background: #f2f2f2;
+}
+main section.six-screen .contacts form .center-contacts-btn {
+  margin-left: 0;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  margin-top: 17px;
+}
+main section.six-screen .map {
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #ad83b2;
+  border-bottom: 1px solid #ad83b2;
+  padding-bottom: 15px;
+}
+main section.six-screen .map--wrapper {
+  width: 100%;
+  min-height: 438px;
+  height: 100%;
 }
 main .navigation-menu__bars, main .navigation-menu__bars::before, main .navigation-menu__bars::after {
   cursor: pointer;
