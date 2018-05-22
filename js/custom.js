@@ -35,8 +35,9 @@ $(document).ready(function() {
     
     
     $(function(){
-      $('[name="phone"]').mask("+7(999) 999-99-99");
-      $('[name="phone_modal"]').mask("8(999) 999-9999");
+        $('[name="phone_cont"]').mask("+7(999) 999-99-99");
+        $('[name="phone"]').mask("+7(999) 999-99-99");
+        $('[name="phone_modal"]').mask("+7(999) 999-99-99");
     });
     
     
@@ -146,6 +147,51 @@ $(document).ready(function() {
 
 
 
+    
+    $('.image-popup-no-margins').magnificPopup({
+		type: 'image',
+		closeOnContentClick: true,
+		closeBtnInside: false,
+		fixedContentPos: true,
+		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+		image: {
+			verticalFit: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300 // don't foget to change the duration also in CSS
+		}
+	});
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    $('.images .img-preview .item').on('click', function(event){
+        event.preventDefault();
+        var attr_src = $(this).find('img').attr('src');
+        $('.images .img-full img').attr('src', attr_src);
+        $('#img-attr').attr('href', attr_src);
+        $('.images .img-anim .inner').toggleClass('wrp');
+        $('.images .img-anim .inner').toggleClass('tgl');
+    });
+    $(function (){
+		var attr_src_load = $('.images .img-preview .item img').first().attr('src');
+        $('.images .img-full img').attr('src', attr_src_load);
+        $('#img-attr').attr('href', attr_src_load);
+	});
+    
+    
 
 
 
@@ -154,7 +200,90 @@ $(document).ready(function() {
 
 
 
+    
+    
+    
+    
+    
+    function call(ev) {
+ 	  var msg   = $(ev).closest('form').serialize();
+        $.ajax({
+          type: 'POST',
+          url: '../php/send.php',
+          data: msg,
+          success: function(data) {
+            $(ev).closest('.result').html(data);
+            $(ev).slideUp('fast');
+          },
+          error:  function(xhr, str){
+	    alert('Возникла ошибка: ' + xhr.responseCode);
+          }
+        });
+    }
 
+    
+    $('#btn_modal').on('click', function(){
+        if(($('[name="name_modal"]').val()!='')&&($('[name="phone_modal"]').val()!='')&&($('[name="phone_modal"]').val()!='+7(___)___-__-__')){
+             call(this);
+           }
+    });
+    $('#btn_cont').on('click', function(){
+        if(($('[name="name_cont"]').val()!='')&&($('[name="phone_cont"]').val()!='')&&($('[name="phone_cont"]').val()!='+7(___)___-__-__')){
+             call(this);
+           }
+    });
+    $('#btn_stock').on('click', function(){
+        if(($('[name="phone"]').val()!='')&&($('[name="phone"]').val()!='+7(___)___-__-__')){
+             call(this);
+           }
+    });
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     $("a.ancLinks").click(function () { 
+			var elementClick = $(this).attr("href");
+			var destination = $(elementClick).offset().top;
+			$('html,body').animate( { scrollTop: destination }, 400 );
+			return false;
+		});
+    
+    $(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+				$('.scrollup, .callme').fadeIn();
+			}
+			else {
+				$('.scrollup, .callme').fadeOut();
+			}
+		});
+
+		$('.scrollup').click(function () {
+			$("html, body").animate({
+				scrollTop: 0
+			}, 600);
+			return false;
+		});
+    
+    
+    
+    
+    
+    
+    
+    
 
 
 

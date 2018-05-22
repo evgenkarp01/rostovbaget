@@ -349,6 +349,58 @@ main .ttl h2 {
             transform: scale(2);
   }
 }
+@-webkit-keyframes anime {
+  0% {
+    opacity: 1;
+    left: 100%;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+@keyframes anime {
+  0% {
+    opacity: 1;
+    left: 100%;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    left: 0;
+  }
+}
+@-webkit-keyframes anime_not {
+  0% {
+    opacity: 1;
+    right: 100%;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+@keyframes anime_not {
+  0% {
+    opacity: 1;
+    right: 100%;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
 main section.main nav ul li {
   list-style: none;
   text-align: center;
@@ -571,7 +623,6 @@ main section.three-screen .gallery .images .img-full {
   width: 100%;
   max-height: 480px;
   overflow: hidden;
-  box-shadow: 0px 4px 9px 0px rgba(50, 50, 50, 0.21);
 }
 main section.three-screen .gallery .images .img-full img {
   height: 480px;
@@ -619,6 +670,31 @@ main section.three-screen .gallery .images .img-preview .item:hover:after {
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: cubic-bezier(0.01, 0.79, 0.01, 0.71);
           animation-timing-function: cubic-bezier(0.01, 0.79, 0.01, 0.71);
+}
+main section.three-screen .gallery .images .img-anim {
+  position: relative;
+}
+main section.three-screen .gallery .images .img-anim .tgl {
+  position: relative;
+  -webkit-animation-name: anime_not;
+          animation-name: anime_not;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.02, 0.91, 0.67, 1);
+          animation-timing-function: cubic-bezier(0.02, 0.91, 0.67, 1);
+}
+main section.three-screen .gallery .images .img-anim .wrp {
+  position: relative;
+  -webkit-animation-name: anime;
+          animation-name: anime;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.02, 0.91, 0.67, 1);
+          animation-timing-function: cubic-bezier(0.02, 0.91, 0.67, 1);
 }
 main section.four-screen .about .lists--item {
   text-align: center;
@@ -1090,4 +1166,27 @@ main .navigation-menu__toggle-mobile {
   display: flex;
   justify-content: center;
   margin-left: 0;
+}
+
+.scrollup {
+  transition: all 0.3s ease-out;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  text-indent: -9999px;
+  background: rgba(0, 0, 0, 0.6) url(../img/sprite.png) no-repeat 13px -1027px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  z-index: 999;
+  display: flex;
+  border-radius: 1px;
+  justify-content: center;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+.scrollup:hover {
+  background: black url(../img/sprite.png) no-repeat 13px -1027px;
 }

@@ -42,13 +42,13 @@
                         <span class="navigation-menu__bars"></span>
                     </div>
                     <ul class="menu-list">
-                        <li class="menu-list__item"><a href="#main">Главная</a></li>
-                        <li class="menu-list__item"><a href="#one-screen">Усдуги</a></li>
-                        <li class="menu-list__item"><a href="#two-screen">Почему мы </a></li>
-                        <li class="menu-list__item"><a href="#three-screen">Наши работы</a></li>
-                        <li class="menu-list__item"><a href="#four-screen">Кто мы</a></li>
-                        <li class="menu-list__item"><a href="#five-screen">Заказать</a></li>
-                        <li class="menu-list__item"><a href="#six-screen">Контакты</a></li>
+                        <li class="menu-list__item"><a class="ancLinks" href="#main">Главная</a></li>
+                        <li class="menu-list__item"><a class="ancLinks" href="#one-screen">Усдуги</a></li>
+                        <li class="menu-list__item"><a class="ancLinks" href="#two-screen">Почему мы </a></li>
+                        <li class="menu-list__item"><a class="ancLinks" href="#three-screen">Наши работы</a></li>
+                        <li class="menu-list__item"><a class="ancLinks" href="#four-screen">Кто мы</a></li>
+                        <li class="menu-list__item"><a class="ancLinks" href="#five-screen">Заказать</a></li>
+                        <li class="menu-list__item"><a class="ancLinks" href="#six-screen">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="banner">
@@ -242,7 +242,7 @@
                     </div>
                     <div class="images">
                         <div class="col6">
-                            <div class="img-full"><img src="img/imgFull.png" alt=""></div>
+                            <div class="img-full img-anim"><div class="inner tgl"><a id="img-attr" class="image-popup-no-margins" href=""><img src="img/imgFull.png" alt=""></a></div></div>
                         </div>
                         <div class="col6">
                             <div class="img-preview">
@@ -309,9 +309,10 @@
                             <div class="desc">...и получите <strong>50% скидку</strong> на доставку и монтаж!
                                 При заказе выезда мастера на замер и консультацию!
                             </div>
-                            <form>
-                                <input type="text" name="phone" placeholder="+7(___) ___-__-__">
-                                <div class="btn btn-stock"><button>Получить скидку 50%</button></div>
+                            <form action="javascript:void(null);">
+                                <input type="text" name="phone" placeholder="+7(___) ___-__-__" required="Введите имя">
+                                <div class="result"></div>
+                                <div class="btn btn-stock result"><button id="btn_stock">Получить скидку 50%</button></div>
                             </form>
                         </div>
                     </div>
@@ -341,11 +342,11 @@
                             </div>
                         </div>
                         <div class="col6">
-                            <form action="">
-                                <input type="text" placeholder="Ваше имя:">
-                                <input type="text" placeholder="Ваш телефон:">
-                                <textarea name="" id="" cols="30" rows="10" placeholder="Сообщение для нас:"></textarea>
-                                <div class="btn center-contacts-btn"><button>Отправить</button></div>
+                            <form id="form-cont" action="javascript:void(null);">
+                                <input type="text" placeholder="Ваше имя:" name="name_cont" required="Введите имя">
+                                <input type="text" placeholder="Ваш телефон:" name="phone_cont" required="Введите телефон">
+                                <textarea name="messageFooter" id="" cols="30" rows="10" placeholder="Сообщение для нас:"></textarea>
+                                <div class="btn center-contacts-btn result"><button id="btn_cont">Отправить</button></div>
                             </form>
                         </div>
                    </div>
@@ -363,13 +364,13 @@
                     <div class="logo"><img src="img/logo.png" alt=""></div>
                     <div class="mmenu">
                         <ul>
-                            <li><a href="#main">Главная</a></li>
-                            <li><a href="#one-screen">Усдуги</a></li>
-                            <li><a href="#two-screen">Почему мы </a></li>
-                            <li><a href="#three-screen">Наши работы</a></li>
-                            <li><a href="#four-screen">Кто мы</a></li>
-                            <li><a href="#five-screen">Заказать</a></li>
-                            <li><a href="#six-screen">Контакты</a></li>
+                            <li><a class="ancLinks" href="#main">Главная</a></li>
+                            <li><a class="ancLinks" href="#one-screen">Усдуги</a></li>
+                            <li><a class="ancLinks" href="#two-screen">Почему мы </a></li>
+                            <li><a class="ancLinks" href="#three-screen">Наши работы</a></li>
+                            <li><a class="ancLinks" href="#four-screen">Кто мы</a></li>
+                            <li><a class="ancLinks" href="#five-screen">Заказать</a></li>
+                            <li><a class="ancLinks" href="#six-screen">Контакты</a></li>
                         </ul>            
                     </div>
                     <div class="social">
@@ -388,20 +389,21 @@
             </div>
         </footer>
     </main>
-    <form id="test-form" class="white-popup-block mfp-hide modal-form">
+    <form id="test-form" class="white-popup-block mfp-hide modal-form" action="javascript:void(null);">
         <h3>Заполните форму</h3>
         <fieldset style="border:0;">
             <ol>
                 <li>
-                    <input id="name" name="name" type="text" placeholder="Ваше имя:" required="">
+                    <input id="name" name="name_modal" type="text" placeholder="Ваше имя:" required="Введите имя">
                 </li>
                 <li>
-                    <input id="phone" name="phone" type="tel" placeholder="Ваш телефон:" required="">
+                    <input id="phone" name="phone_modal" type="tel" placeholder="Ваш телефон:" required="Введите телефон">
                 </li>
             </ol>
-            <div class="btn btn-form"><button>Отправить</button></div>
+            <div class="btn btn-form result"><button id="btn_modal">Отправить</button></div>
         </fieldset>
     </form>
+    <a href="#" class="scrollup" style="display: inline;">Наверх</a>
     <script
   src="http://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
