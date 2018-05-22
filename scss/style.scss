@@ -58,6 +58,35 @@ $fz: 16px;
     font-weight: normal;
     /* <i class="demo-icon icon-phone">&#xe800;</i> */
 }
+.btn{
+    position: relative;
+    margin-left: 5px;
+    height: 53px;
+    button{
+        background: url(../img/btn.png) no-repeat;
+        background-size: 100% 100%;
+        height: 53px;
+        max-width: 257px;
+        width: 100%;
+        border: none;
+        font-size: $fz;
+        font-weight: 400;
+        transition: all 0.2s ease-out;
+        position: absolute;
+        padding: 0;
+        margin: 0;
+        &:hover{
+            transform: scale(1.04);
+        }
+    }
+    a{
+        width: 257px;
+    }
+}
+.btn-center{
+    display: flex;
+    justify-content: center;
+}
 body{
     font-size: $fz;
     font-family: $PNName, sans-serif;
@@ -136,32 +165,6 @@ main{
             }
         }
     }
-.btn{
-    position: relative;
-    margin-left: 5px;
-    height: 53px;
-    button{
-        background: url(../img/btn.png) no-repeat;
-        background-size: 100% 100%;
-        height: 53px;
-        max-width: 257px;
-        width: 100%;
-        border: none;
-        font-size: $fz;
-        font-weight: 400;
-        transition: all 0.2s ease-out;
-        position: absolute;
-        padding: 0;
-        margin: 0;
-        &:hover{
-            transform: scale(1.04);
-        }
-    }
-}
-.btn-center{
-    display: flex;
-    justify-content: center;
-}
 .ttl{
     text-align: center;
     margin-top: 90px;
@@ -266,6 +269,9 @@ main{
                     }
                 }
             }
+            .btn-banner{
+                justify-content: flex-start;
+            }
         }
         &.one-screen{
             .seporate{
@@ -314,13 +320,13 @@ main{
                             font-size: 22px;
                             font-weight: 300;
                             margin: 35px 0;
-                            width: 310px;
+                            max-width: 310px;
                             margin-left: auto;
                             margin-right: auto;
                         }
                         &--pottern{
                             img{
-                                width: 310px;
+                                max-width: 310px;
                                 height: auto;
                             }
                         }
@@ -328,7 +334,7 @@ main{
                             font-weight: 400;
                             line-height: 24px;
                             margin: 16px 0 58px 0;
-                            width: 310px;
+                            max-width: 310px;
                             margin-left: auto;
                             margin-right: auto;
                         }
@@ -478,7 +484,11 @@ main{
                                 right: 0;
                                 left: 0;
                                 bottom: 0;
-                                background: url(../img/hoverImg.png);
+                                background: url(../img/hoverImg.png) no-repeat;
+                                background-position: 100% 100%;
+                                -webkit-background-size: cover;
+                                     -o-background-size: cover;
+                                        background-size: cover;
                                 animation-name: scale_in;
                                 animation-duration: 0.5s;
                                 animation-fill-mode: forwards;
@@ -649,6 +659,7 @@ main{
                 form{
                     margin-left: 90px;
                     max-width: 442px;
+                    width: 100%;
                     display: -webkit-flex;
                     display: -moz-flex;
                     display: -ms-flex;
@@ -718,24 +729,81 @@ main{
             }
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    footer{
+        margin: 15px 0;
+        .flex-wrap{
+            display: flex;
+            justify-content: space-between;
+            -webkit-align-items: center;
+                    align-items: center;
+            .logo{
+                img{
+                    max-width: 189px;
+                    height: auto;
+                }
+            }
+            .mmenu{
+                ul{
+                    font-size: $fz;
+                    font-weight: 400;
+                    letter-spacing: 0.16px;
+                    max-width: 625px;
+                    width: 100%;
+                    li{
+                        display: inline-block;
+                        list-style: none;
+                        padding: 0 5px;
+                        a{
+                           position: relative;
+                           &:after, &:before{
+                                content: '';
+                                position: absolute; top: 100%;
+                                width: 0%;
+                                height: 2px;
+                                background: $bk;
+                                transition: .3s;
+                            }
+                            &:after{
+                                right: 50%;
+                            }
+                            &:before{
+                                left: 50%;
+                            }
+                            &:hover:before,
+                            &:hover:after{    
+                                width: 50%;
+                            } 
+                        }
+                    }
+                }
+            }
+            .social{
+                ul{
+                    li{
+                        display: inline-block;
+                        padding-right: 3px;
+                        a{
+                            img{
+                                max-width: 30px;
+                                outline: none;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .copyright{
+            color: #848484;
+            font-size: 12px;
+            font-weight: 300;
+            text-align: center;
+            p{
+                
+            }
+        }
+    }
+     
 
 $menu-background-color: #4E567E;
 $menu-icons-color: #000;
@@ -808,7 +876,7 @@ $menu-icons-color: #000;
     height: 30px;
     position: absolute;
     right: -40px;
-    top: 5px;
+    top: 8px;
     width: 30px;
   }
   
@@ -851,39 +919,62 @@ $menu-icons-color: #000;
     width: 80%;
     
     &::before {
-      width: 110%;
+      width: 100%;
     }
   }
 }
 
-@media only screen and (max-width: 480px) {
-  .navigation-menu {
-    background-color: $menu-background-color;
-    min-width: 240px;
-    width: 80%;
     
-    &::before {
-      transform: translate(-50%, -50%) rotate(45deg)
+}
+main .navigation-menu__toggle-mobile{
+    right: 14px;
+    top: 8px;
+    z-index: 555;
+}
+.mfp-bg{
+    background: rgba(255,255,255,0.90) !important;
+    opacity: 1;
+    
+}
+.modal-form{
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    min-height: 350px;
+    text-align: center;
+    border-radius: 9px;
+    background: rgba(183, 151, 193, 0.35);
+    transition: all 3s ease-out;
+    h3{
+            font-family: "Georgia";
+            font-size: 40px;
+            font-weight: normal;
+            padding-top: 35px;
     }
-  }
+    ol{
+        list-style-type: none;
+        padding: 10px 40px;
+        li{
+            margin: 30px 0;
+            input{
+                background: none;
+                border: none;
+                border-bottom: 1px solid #000;
+                width: 100%;
+                font-size: 18px;
+                padding: 0 15px;
+            }
+        }
+    }
+    .btn-form{
+        display: flex;
+        -webkit-justify-content: center;
+                justify-content: center;
+            margin-left: 0;
+    }
+    @include boxshadow();
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-}
-
-
-
 
 
 

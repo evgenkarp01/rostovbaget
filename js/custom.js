@@ -2,6 +2,9 @@ $(document).ready(function() {
    (function($) {
       $('.js-nav-menu-toggle').on('click', function() {
         $(this).parents('.navigation-menu').toggleClass('navigation-menu--open');
+        if(window.innerWidth<768){
+          $('.js-nav-menu-toggle').toggleClass('navigation-menu__toggle-mobile');
+        }
       });
 
       $('html').on('click', function(e) {
@@ -11,13 +14,17 @@ $(document).ready(function() {
         }
       });
     })(jQuery);
+
     
     
     
     
     
+    $('.btn-banner button').on('click', function() {
+        $('.modal-form').toggleClass('bg-modal-form');
+      });
     
-    
+      
     
     
     
@@ -91,8 +98,21 @@ $(document).ready(function() {
     
     
     
-    
-    
+    $('.popup-with-form').magnificPopup({
+      type: 'inline',
+      preloader: false,
+      focus: '#name',
+      callbacks: {
+        beforeOpen: function() {
+          if($(window).width() < 700) {
+            this.st.focus = false;
+          } else {
+            this.st.focus = '#name';
+          }
+        }
+      }
+    });
+      
     
     
     
@@ -100,5 +120,70 @@ $(document).ready(function() {
     
     
 
+
+
+
+
+
+
+
+
+
+
+    wow = new WOW({
+            boxClass: 'wow',
+            animateClass: 'animated',
+            offset: 200,
+            mobile: false,
+            live: true
+        })
+        wow.init();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

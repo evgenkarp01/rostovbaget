@@ -1,0 +1,279 @@
+@media only screen and (max-width: 1300px) {
+  main section.three-screen .gallery .images .img-full img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  main section.three-screen .gallery {
+    padding: 0;
+  }
+
+  main section.three-screen .gallery .images .col6 {
+    padding: 0 5px;
+  }
+
+  main section.three-screen .gallery .images .img-preview {
+    margin-left: 0;
+  }
+
+  main section.three-screen .gallery .images .img-preview {
+    width: 100%;
+    min-height: 446px;
+  }
+
+  main section.three-screen .gallery .images .img-preview .item {
+    max-width: 187px;
+    height: 144px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  header {
+    padding: 0 10px;
+  }
+
+  header .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  main section .banner .descript {
+    padding: 0 10px;
+  }
+
+  main section .banner .descript h1 {
+    font-size: 51px;
+  }
+
+  main section.one-screen .services .flex-wrap {
+    justify-content: space-around;
+  }
+
+  main section.one-screen .services .flex-wrap .service {
+    margin: 16px 10px;
+  }
+
+  main section.one-screen {
+    padding: 0 10px;
+  }
+
+  main section.three-screen .gallery .images .img-preview .item img {
+    min-height: 194px;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  main section.three-screen .gallery .images .img-preview .item {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  main section.three-screen .gallery .images .col6:first-child {
+    display: none;
+  }
+
+  main section.three-screen .gallery .images .col6 {
+    width: 100%;
+  }
+
+  main section.three-screen .gallery .images .img-preview {
+    justify-content: space-around;
+  }
+
+  main section.four-screen .about .lists {
+    padding: 0 15px;
+  }
+
+  main section.six-screen .contacts .address {
+    margin-left: 0;
+  }
+
+  main section.six-screen .contacts form {
+    float: right;
+  }
+
+  main section.six-screen .contacts {
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  main header .flex-wrap .address {
+    max-width: 420px;
+    margin-left: 40px;
+  }
+
+  header .logo img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  main section .banner .descript br {
+    display: none;
+  }
+
+  main section .banner .descript .introtext p {
+    letter-spacing: -1px;
+  }
+
+  main section.two-screen .advantage .flex-wrap {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  main section.special .spec .oplet {
+    padding: 0 10px;
+  }
+
+  main section.special .spec .event {
+    margin: 0 5px;
+  }
+
+  main footer .flex-wrap .mmenu {
+    display: none;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main header .flex-wrap {
+    flex-direction: column;
+  }
+
+  main header .flex-wrap .address {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main section .banner .descript {
+    text-align: center;
+  }
+
+  main .navigation-menu {
+    width: 100%;
+  }
+
+  main section.main {
+    padding: 0 10px;
+  }
+
+  main .btn {
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  main section .banner {
+    background: url(../img/banner.png), #c3c3c3;
+    background-blend-mode: overlay;
+  }
+
+  main section.two-screen .advantage .item {
+    margin-top: 25px;
+  }
+
+  main section.special .spec .oplet {
+    margin-bottom: 0;
+    flex-direction: column;
+  }
+
+  main section.special .spec .event {
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  main section.five-screen .promo .stock form {
+    position: relative;
+    height: 90px;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+  }
+
+  main section.five-screen .promo .stock form input, main section.five-screen .promo .stock .btn-stock {
+    position: relative;
+  }
+
+  main section.five-screen .promo .stock form input {
+    text-align: center;
+  }
+
+  main section.five-screen .promo .stock {
+    padding: 0 10px;
+  }
+
+  main section.six-screen .contacts .col6 {
+    width: 100%;
+  }
+
+  main section.six-screen .contacts form {
+    max-width: 100%;
+  }
+
+  main section.six-screen .contacts .flex-wrap {
+    flex-direction: column;
+  }
+
+  main section.six-screen .contacts .address {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 480px) {
+  main header .flex-wrap .address {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  main header .flex-wrap .address .adr {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+
+  main section .banner .descript h1 {
+    font-size: 33px;
+    line-height: 1.2;
+  }
+
+  main section .banner .descript .introtext {
+    font-size: 21px;
+    padding-bottom: 55px;
+    margin-top: 20px;
+  }
+
+  main section.one-screen .services .flex-wrap .service--img img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  main section.one-screen .services .flex-wrap .service--pottern img {
+    max-width: 244px;
+  }
+
+  main section.one-screen .services .flex-wrap .service {
+    margin: 16px 0px;
+  }
+
+  main section.two-screen .advantage .item:not(:first-child) {
+    margin-top: 40px;
+  }
+
+  main section.special .spec .event--desc {
+    margin-left: 10px;
+  }
+
+  main section.special .spec .event--number {
+    margin-left: 12px;
+  }
+
+  main footer .flex-wrap .logo img {
+    max-width: 150px;
+    width: 100%;
+  }
+
+  .modal-form ol {
+    padding: 10px 15px;
+  }
+}

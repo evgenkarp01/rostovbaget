@@ -159,6 +159,38 @@ a {
   /* <i class="demo-icon icon-phone">&#xe800;</i> */
 }
 
+.btn {
+  position: relative;
+  margin-left: 5px;
+  height: 53px;
+}
+.btn button {
+  background: url(../img/btn.png) no-repeat;
+  background-size: 100% 100%;
+  height: 53px;
+  max-width: 257px;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.2s ease-out;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+.btn button:hover {
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+.btn a {
+  width: 257px;
+}
+
+.btn-center {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   font-size: 16px;
   font-family: "Proxima Nova", sans-serif;
@@ -226,33 +258,6 @@ main header .flex-wrap .address .adr p a:before {
 }
 main header .flex-wrap .address .adr p a:hover:before, main header .flex-wrap .address .adr p a:hover:after {
   width: 50%;
-}
-main .btn {
-  position: relative;
-  margin-left: 5px;
-  height: 53px;
-}
-main .btn button {
-  background: url(../img/btn.png) no-repeat;
-  background-size: 100% 100%;
-  height: 53px;
-  max-width: 257px;
-  width: 100%;
-  border: none;
-  font-size: 16px;
-  font-weight: 400;
-  transition: all 0.2s ease-out;
-  position: absolute;
-  padding: 0;
-  margin: 0;
-}
-main .btn button:hover {
-  -webkit-transform: scale(1.04);
-          transform: scale(1.04);
-}
-main .btn-center {
-  display: flex;
-  justify-content: center;
 }
 main .ttl {
   text-align: center;
@@ -395,6 +400,9 @@ main section .banner .descript .introtext {
 main section .banner .descript .introtext p {
   line-height: 1.4;
 }
+main section .banner .btn-banner {
+  justify-content: flex-start;
+}
 main section.one-screen .seporate {
   border-top: 1px solid #ad83b2;
 }
@@ -448,19 +456,19 @@ main section.one-screen .services .flex-wrap .service--ttl {
   font-size: 22px;
   font-weight: 300;
   margin: 35px 0;
-  width: 310px;
+  max-width: 310px;
   margin-left: auto;
   margin-right: auto;
 }
 main section.one-screen .services .flex-wrap .service--pottern img {
-  width: 310px;
+  max-width: 310px;
   height: auto;
 }
 main section.one-screen .services .flex-wrap .service--desc {
   font-weight: 400;
   line-height: 24px;
   margin: 16px 0 58px 0;
-  width: 310px;
+  max-width: 310px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -600,7 +608,9 @@ main section.three-screen .gallery .images .img-preview .item:hover:after {
   right: 0;
   left: 0;
   bottom: 0;
-  background: url(../img/hoverImg.png);
+  background: url(../img/hoverImg.png) no-repeat;
+  background-position: 100% 100%;
+  background-size: cover;
   -webkit-animation-name: scale_in;
           animation-name: scale_in;
   -webkit-animation-duration: 0.5s;
@@ -753,6 +763,7 @@ main section.six-screen .contacts .address .clock i {
 main section.six-screen .contacts form {
   margin-left: 90px;
   max-width: 442px;
+  width: 100%;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -840,6 +851,66 @@ main section.six-screen .map--wrapper {
   width: 100%;
   min-height: 438px;
   height: 100%;
+}
+main footer {
+  margin: 15px 0;
+}
+main footer .flex-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main footer .flex-wrap .logo img {
+  max-width: 189px;
+  height: auto;
+}
+main footer .flex-wrap .mmenu ul {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.16px;
+  max-width: 625px;
+  width: 100%;
+}
+main footer .flex-wrap .mmenu ul li {
+  display: inline-block;
+  list-style: none;
+  padding: 0 5px;
+}
+main footer .flex-wrap .mmenu ul li a {
+  position: relative;
+}
+main footer .flex-wrap .mmenu ul li a:after, main footer .flex-wrap .mmenu ul li a:before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  width: 0%;
+  height: 2px;
+  background: #000;
+  transition: .3s;
+}
+main footer .flex-wrap .mmenu ul li a:after {
+  right: 50%;
+}
+main footer .flex-wrap .mmenu ul li a:before {
+  left: 50%;
+}
+main footer .flex-wrap .mmenu ul li a:hover:before, main footer .flex-wrap .mmenu ul li a:hover:after {
+  width: 50%;
+}
+main footer .flex-wrap .social ul li {
+  display: inline-block;
+  padding-right: 3px;
+}
+main footer .flex-wrap .social ul li a img {
+  max-width: 30px;
+  outline: none;
+  height: auto;
+}
+main footer .copyright {
+  color: #848484;
+  font-size: 12px;
+  font-weight: 300;
+  text-align: center;
 }
 main .navigation-menu__bars, main .navigation-menu__bars::before, main .navigation-menu__bars::after {
   cursor: pointer;
@@ -937,7 +1008,7 @@ main .navigation-menu__toggle {
   height: 30px;
   position: absolute;
   right: -40px;
-  top: 5px;
+  top: 8px;
   width: 30px;
 }
 main .navigation-menu__bars::before, main .navigation-menu__bars::after {
@@ -967,17 +1038,56 @@ main .menu-list__item {
     width: 80%;
   }
   main .navigation-menu::before {
-    width: 110%;
+    width: 100%;
   }
 }
-@media only screen and (max-width: 480px) {
-  main .navigation-menu {
-    background-color: #4E567E;
-    min-width: 240px;
-    width: 80%;
-  }
-  main .navigation-menu::before {
-    -webkit-transform: translate(-50%, -50%) rotate(45deg);
-            transform: translate(-50%, -50%) rotate(45deg);
-  }
+
+main .navigation-menu__toggle-mobile {
+  right: 14px;
+  top: 8px;
+  z-index: 555;
+}
+
+.mfp-bg {
+  background: rgba(255, 255, 255, 0.9) !important;
+  opacity: 1;
+}
+
+.modal-form {
+  max-width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  min-height: 350px;
+  text-align: center;
+  border-radius: 9px;
+  background: rgba(183, 151, 193, 0.35);
+  transition: all 3s ease-out;
+  box-shadow: 0px 4px 9px 0px rgba(50, 50, 50, 0.21);
+}
+.modal-form h3 {
+  font-family: "Georgia";
+  font-size: 40px;
+  font-weight: normal;
+  padding-top: 35px;
+}
+.modal-form ol {
+  list-style-type: none;
+  padding: 10px 40px;
+}
+.modal-form ol li {
+  margin: 30px 0;
+}
+.modal-form ol li input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  font-size: 18px;
+  padding: 0 15px;
+}
+.modal-form .btn-form {
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
 }
