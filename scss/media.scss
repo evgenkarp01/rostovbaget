@@ -48,15 +48,24 @@
 	}
 	main section.three-screen .gallery .images .img-preview .item img {
 	    min-height: 194px;
-	    height: 100%;
+	    height: auto;
 	    width: 100%;
 	    max-width: 100%;
 	}
 	main section.three-screen .gallery .images .img-preview .item {
 	    max-width: 300px;
 	    width: 100%;
+	    min-height: 225px;
 	    height: auto;
 	    margin-bottom: 15px;
+	}
+	.gallery .images .img-preview .item a {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    left: 0;
+	    bottom: 0;
+	    z-index: 8;
 	}
 	main section.three-screen .gallery .images .col6:first-child {
 	    display: none;
@@ -80,6 +89,7 @@
     main section.six-screen .contacts{
     	padding: 0 10px;
     }
+
 }
 @media only screen and (max-width: 992px){
 	main header .flex-wrap .address {
@@ -181,6 +191,9 @@
 	main section.six-screen .contacts .address{
 		text-align: center;
 	}
+	main section .banner .btn-banner{
+		justify-content: center;
+	}
 }
 @media only screen and (max-width: 480px){
 	main header .flex-wrap .address{
@@ -226,5 +239,14 @@
 	}
 	.modal-form ol{
 		padding: 10px 15px;
+	}
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+   main section .banner {
+	  height: 700px;
+	}
+	main section.three-screen .gallery .images .img-preview{
+		height: 480px;
 	}
 }
